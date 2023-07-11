@@ -1,3 +1,15 @@
 .header-container {
-    color: palevioletred;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    padding: 15px 20px;
+}
+.header-left {
+    display: flex;
+    align-items: center;
+}
+.camera {
+    font-size: 2rem;
+    padding-right: 5px;
 }
