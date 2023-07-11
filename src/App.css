@@ -6,3 +6,7 @@
     box-sizing: border-box;
     font-family: 'Actor', sans-serif;
 }
+a{
+    text-decoration: none;
+    color:inherit;
+}

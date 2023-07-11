@@ -1,15 +1,16 @@
 import React from 'react'
 import './Header.css'
+import {Link} from 'react-router-dom'
 import { TbCameraHeart } from "react-icons/tb";
 
 function Header() {
   return (
     <div className='header-container'>
         <section className='header-left'>
-        <TbCameraHeart className='camera'/>
-        <h1>Polaroid Palette</h1>
+          <Link to='/'><TbCameraHeart className='camera'/></Link>
+          <Link to='/'>Polaroid Palette</Link>
         </section>
-        <h2>My Palette</h2>
+          <Link to='/mypalette'>My Palette</Link>
     </div>
   )
 }
