@@ -1,0 +1,9 @@
+.homepage-banner {
+    height: 350px;
+    width: 94vw;
+    object-fit: cover;
+}
+.homepage-container {
+    display: flex;
+    justify-content: center;
+}

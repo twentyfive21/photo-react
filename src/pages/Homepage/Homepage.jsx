@@ -1,12 +1,12 @@
 import React from 'react'
 import './Homepage.css'
+import banner from '../../assets/banner.jpg'
 
 
 function Homepage() {
   return (
-    <div>
-      <h1>Homepage</h1>
-      {/* <img src={banner} /> */}
+    <div className='homepage-container'>
+      <img src={banner} className='homepage-banner'/>
     </div>
     
   )
