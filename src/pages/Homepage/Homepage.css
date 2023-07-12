@@ -2,7 +2,9 @@
     height: 350px;
     width: 94vw;
     object-fit: cover;
+    border-radius: 2px;
 }
+
 .homepage-container {
     display: flex;
     justify-content: center;
