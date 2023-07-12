@@ -2,13 +2,14 @@ import React, {useEffect, useState} from 'react'
 import './Homepage.css'
 import banner from '../../assets/banner.jpg'
 import axios from 'axios'
+import PhotoCard from '../../components/PhotoCard/PhotoCard'
 
 
 function Homepage() {
 
     // create state for page number
     const [photos, setPhotos] = useState([])
-    const pageNum = 1;
+    let pageNum = 1;
 
 // Make a api call to site
 useEffect(() => {
@@ -22,8 +23,8 @@ useEffect(() => {
         }
       });
       const jsonData = await response.json();
+      console.log(jsonData.photos)
       setPhotos(jsonData.photos)
-     console.log(photos)
     } catch (err) {
       console.error(err);
     }
@@ -31,11 +32,22 @@ useEffect(() => {
   fetchData();
 }, []);
 
+// incrementing pages 
+const prevBtn = () => {
+  if(pageNum === 1) {
+    pageNum = 1;
+  } else if (pageNum > 1) {
+    pageNum--
+  }
+}
 
   return (
     <div className='homepage-container'>
-      <button>Prev</button>
-      <button>Next</button>
+      {/* <button>Prev</button>
+      <button>Next</button> */}
+      {
+        photos.map(item => <PhotoCard key={item.id} photo={item}/>)
+      }
       {/* <img src={banner} className='homepage-banner'/> */}
     </div>
     
