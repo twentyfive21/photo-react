@@ -4,11 +4,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 55vw;
-    height: 280px;
+    width: 250px;
+    height: 350px;
     margin: 20px 20px;
 }
 .cards-container img {
-    width: 45vw;
-    height: 200px;
+    width: 200px;
+    height: 240px;
+    object-fit: cover;
 }

@@ -8,6 +8,6 @@
 .homepage-container {
     display: flex;
     flex-wrap: wrap;
+    background-color: aqua;
     justify-content: center;
-    align-items: center;
 }

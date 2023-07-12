@@ -17,7 +17,7 @@ useEffect(() => {
   const fetchData = async () => {
     try {
       const apiKey = import.meta.env.VITE_API_KEY
-      const response = await fetch(`https://api.pexels.com/v1/curated?page=${pageNum}&per_page=12`, {
+      const response = await fetch(`https://api.pexels.com/v1/curated?page=${pageNum}&per_page=24`, {
         headers: {
           Authorization: apiKey
         }
