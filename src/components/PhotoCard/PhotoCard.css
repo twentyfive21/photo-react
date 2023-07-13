@@ -3,18 +3,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 250px;
-    height: 350px;
+    height: 360px;
     margin: 20px 45px;
 }
 .cards-container img {
     width: 200px;
     height: 240px;
     object-fit: cover;
+    padding-top: 10px;
 }
 .text-center {
     text-align: center;
-    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     letter-spacing: 1px;
 }
+/* .heart-icon {
+ 
+} */

@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react'
 import './Homepage.css'
-import banner from '../../assets/banner.jpg'
 import axios from 'axios'
 import PhotoCard from '../../components/PhotoCard/PhotoCard'
 
