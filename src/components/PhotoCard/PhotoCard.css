@@ -12,15 +12,14 @@
     width: 200px;
     height: 240px;
     object-fit: cover;
-    padding-top: 10px;
+    padding-top: 5px;
 }
 .text-center {
-    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    letter-spacing: 1px;
+    line-height: 22px;
 }
-/* .heart-icon {
- 
-} */
+.heart-icon {
+ margin-top: 5px;
+}
