@@ -6,23 +6,26 @@ import PhotoCard from '../../components/PhotoCard/PhotoCard'
 
 function Homepage() {
 
-    // create state for page number
+    // create state photos to be stored
     const [photos, setPhotos] = useState([])
-    let pageNum = 1;
-
+    let pageNum = Math.floor(Math.random() * 50);
+    const [query, setQuery] = useState('mexicans eating')
+    console.log(query)
+   
 // Make a api call to site
 useEffect(() => {
+
 
   const fetchData = async () => {
     try {
       const apiKey = import.meta.env.VITE_API_KEY
-      const response = await fetch(`https://api.pexels.com/v1/curated?page=${pageNum}&per_page=80`, {
+      const response = await fetch(`https://api.pexels.com/v1/search?query=${query}&page=${pageNum}&per_page=80`, {
         headers: {
           Authorization: apiKey
         }
       });
       const jsonData = await response.json();
-      console.log(jsonData.photos)
+      // console.log(jsonData.photos)
       setPhotos(jsonData?.photos)
     } catch (err) {
       console.error(err);
@@ -31,14 +34,9 @@ useEffect(() => {
   fetchData();
 }, []);
 
-// incrementing pages 
-const prevBtn = () => {
-  if(pageNum === 1) {
-    pageNum = 1;
-  } else if (pageNum > 1) {
-    pageNum--
-  }
-}
+// `https://api.pexels.com/v1/search?query=${cat}&page=${pageNum}&per_page=80`
+// https://api.pexels.com/v1/curated?page=80&per_page=40
+
 
   return (
     <div>
