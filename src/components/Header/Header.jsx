@@ -10,6 +10,7 @@ function Header() {
           <Link to='/'><TbCameraHeart className='camera'/></Link>
           <Link to='/'>Polaroid Palette</Link>
         </section>
+        <input type='text' placeholder='Search' id='input' name='search'></input>
           <Link to='/mypalette'>My Palette</Link>
     </div>
   )

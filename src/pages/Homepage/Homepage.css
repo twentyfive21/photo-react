@@ -1,13 +1,14 @@
 .homepage-banner {
     height: 350px;
-    width: 94vw;
+    width: 90vw;
     object-fit: cover;
     border-radius: 2px;
+    margin: 30px 0px;
 }
 
 .homepage-container {
     display: flex;
     flex-wrap: wrap;
-    background-color: aqua;
+    /* background-color: aqua; */
     justify-content: center;
 }
