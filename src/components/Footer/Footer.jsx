@@ -3,7 +3,9 @@ import './Footer.css'
 
 function Footer() {
   return (
-    <div>Footer</div>
+    <footer>
+    &#169; 2023 
+    </footer>
   )
 }
 
