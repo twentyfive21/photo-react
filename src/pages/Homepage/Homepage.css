@@ -12,3 +12,13 @@
     /* background-color: aqua; */
     justify-content: center;
 }
+.homepage-btn {
+    display: flex;
+    justify-content: center;
+}
+.homepage-btn button {
+   height: 3vh;
+   width: 15vw;
+   border-radius: 20px;
+   margin: 10px 10px;
+}
