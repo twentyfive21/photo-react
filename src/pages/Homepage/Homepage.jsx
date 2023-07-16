@@ -5,7 +5,7 @@ import PhotoCard from '../../components/PhotoCard/PhotoCard'
 
 
 function Homepage() {
-  
+
     // total_results object holds the total amount of photos that comes back on a search
     // create state photos to be stored
     const [photos, setPhotos] = useState([])
@@ -15,10 +15,10 @@ function Homepage() {
     const [pageNum, setPageNum] = useState(1)
     // sets 0 as initial and then updates to the total amount of pages available to display 
     const [totalPages, setTotalPages] = useState(0)
-
     // navigates through pages 
-      const nextPage = () => setPageNum(pageNum + 1)
+      const nextPage = () => pageNum < totalPages ? setPageNum(pageNum + 1) : setPageNum(totalPages)
       const prevPage = () => pageNum == 1 ? setPageNum(1) : setPageNum(pageNum - 1)
+      console.log("curr  total pages"+ totalPages)
 
 // Make a api call to site for search query 
 useEffect(() => {
@@ -36,13 +36,14 @@ useEffect(() => {
       const jsonData = await response.json();
       console.log(jsonData)
       setPhotos(jsonData?.photos)
-      console.log("query" + totalPages)
+      setTotalPages(Math.ceil(jsonData?.total_results / 80))
     } catch (err) {
       console.error(err);
     }
   };
   fetchData();
 }
+// Api call for curated photos
 else {
   const fetchData = async () => {
     try {
@@ -55,7 +56,7 @@ else {
       // console.log(jsonData)
       setPhotos(jsonData?.photos)
       // since there are 8000 photos diving by 80 gives us 100pgs for curated 
-      setTotalPages(jsonData?.total_results / 80)
+      setTotalPages(Math.ceil(jsonData?.total_results / 80))
       // console.log("curated" + totalPages)
     } catch (err) {
       console.error(err);
@@ -64,6 +65,7 @@ else {
   fetchData();
 }
 }, [query, pageNum]);
+
 
   return (
     <div>
