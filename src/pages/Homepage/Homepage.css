@@ -9,7 +9,6 @@
 .homepage-container {
     display: flex;
     flex-wrap: wrap;
-    /* background-color: aqua; */
     justify-content: center;
 }
 .homepage-btn {
@@ -21,4 +20,10 @@
    width: 15vw;
    border-radius: 20px;
    margin: 10px 10px;
+}
+.pages {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
