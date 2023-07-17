@@ -14,12 +14,17 @@
 .homepage-btn {
     display: flex;
     justify-content: center;
+    font-size: 2rem;
 }
 .homepage-btn button {
-   height: 3vh;
-   width: 15vw;
+   height: 4vh;
+   width: 12vw;
+   font-size: 1rem;
    border-radius: 20px;
    margin: 10px 10px;
+   border: none;
+   background-color: lightsteelblue;
+   cursor: pointer;
 }
 .pages {
     margin-top: 15px;
