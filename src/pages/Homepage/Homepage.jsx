@@ -1,15 +1,15 @@
-import React, {useEffect, useState} from 'react'
+import React, {useContext, useEffect, useState} from 'react'
 import './Homepage.css'
 import PhotoCard from '../../components/PhotoCard/PhotoCard'
+import { SearchContext } from '../../contexts/Search'
 
 
 function Homepage() {
 
+    const {query} = useContext(SearchContext)
     // total_results object holds the total amount of photos that comes back on a search
     // create state photos to be stored
     const [photos, setPhotos] = useState([])
-      // setting state for query search
-    const [query, setQuery] = useState('')
     // sets page one as default state for onload of both api fetches
     const [pageNum, setPageNum] = useState(1)
     // sets 0 as initial and then updates to the total amount of pages available to display 
