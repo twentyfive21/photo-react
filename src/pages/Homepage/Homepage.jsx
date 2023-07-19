@@ -6,12 +6,10 @@ import { SearchContext } from '../../contexts/Search'
 
 function Homepage() {
 
-    const {query, userInput} = useContext(SearchContext)
+    const {query, userInput, pageNum, setPageNum} = useContext(SearchContext)
     // total_results object holds the total amount of photos that comes back on a search
     // create state photos to be stored
     const [photos, setPhotos] = useState([])
-    // sets page one as default state for onload of both api fetches
-    const [pageNum, setPageNum] = useState(1)
     // sets 0 as initial and then updates to the total amount of pages available to display 
     const [totalPages, setTotalPages] = useState(0)
     
