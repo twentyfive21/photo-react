@@ -9,9 +9,10 @@ function Header() {
   const {query, setQuery, setUserInput, setPageNum} = useContext(SearchContext)
 
   const handleSubmit = (e) => {
+    setPageNum(1) 
     setQuery(e.target.value)
-    setUserInput(e.target.value) 
-    setTimeout(()=> setQuery(''), 8000)
+    setUserInput(e.target.value)
+    setTimeout(()=> setQuery(''), 10000)
   }
 const clearInput = () => {
   setPageNum(1)
