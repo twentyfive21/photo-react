@@ -6,10 +6,11 @@ import {useState, createContext} from 'react'
     export function SearchContextProvider(props){
           // setting state for query search
     const [query, setQuery] = useState('')
+    const [userInput, setUserInput] = useState('')
 
     
     return(
-        <SearchContext.Provider value={{query, setQuery}}>
+        <SearchContext.Provider value={{query, setQuery, userInput, setUserInput}}>
             {props.children}
         </SearchContext.Provider>
         )

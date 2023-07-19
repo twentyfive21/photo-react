@@ -6,15 +6,22 @@ import { SearchContext } from '../../contexts/Search';
 
 function Header() {
 
-  const {query, setQuery} = useContext(SearchContext)
+  const {query, setQuery, setUserInput} = useContext(SearchContext)
 
+  const handleSubmit = (e) => {
+    setQuery(e.target.value)
+    setUserInput(e.target.value) 
+    setTimeout(()=> setQuery(''), 8000)
+  }
+
+  
   return (
     <div className='header-container'>
         <section className='header-left'>
           <Link to='/'><TbCameraHeart className='camera'/></Link>
           <Link to='/'>Polaroid Palette</Link>
         </section>
-        <input onChange={(e)=>setQuery(e.target.value)}
+        <input onChange={handleSubmit}
         value={query} type='text' placeholder='Search' id='input'
         ></input>
           <Link to='/mypalette'>My Palette</Link>

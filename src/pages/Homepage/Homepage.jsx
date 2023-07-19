@@ -6,7 +6,7 @@ import { SearchContext } from '../../contexts/Search'
 
 function Homepage() {
 
-    const {query} = useContext(SearchContext)
+    const {query, userInput} = useContext(SearchContext)
     // total_results object holds the total amount of photos that comes back on a search
     // create state photos to be stored
     const [photos, setPhotos] = useState([])
@@ -38,10 +38,10 @@ useEffect(() => {
 
   const apiKey = import.meta.env.VITE_API_KEY
   
-  if(query) {
+  if(userInput) {
   const fetchData = async () => {
     try {
-      const response = await fetch(`https://api.pexels.com/v1/search?query=${query}&page=${pageNum}&per_page=80`, {
+      const response = await fetch(`https://api.pexels.com/v1/search?query=${userInput}&page=${pageNum}&per_page=16`, {
         headers: {
           Authorization: apiKey
         }
@@ -49,7 +49,7 @@ useEffect(() => {
       const jsonData = await response.json();
       console.log(jsonData)
       setPhotos(jsonData?.photos)
-      setTotalPages(Math.ceil(jsonData?.total_results / 80))
+      setTotalPages(Math.ceil(jsonData?.total_results / 16))
     } catch (err) {
       console.error(err);
     }
@@ -60,7 +60,7 @@ useEffect(() => {
 else {
   const fetchData = async () => {
     try {
-      const response = await fetch(`https://api.pexels.com/v1/curated?page=${pageNum}&per_page=80`, {
+      const response = await fetch(`https://api.pexels.com/v1/curated?page=${pageNum}&per_page=16`, {
         headers: {
           Authorization: apiKey
         }
@@ -69,7 +69,7 @@ else {
       console.log(jsonData)
       setPhotos(jsonData?.photos)
       // since there are 8000 photos diving by 80 gives us 100pgs for curated 
-      setTotalPages(Math.ceil(jsonData?.total_results / 80))
+      setTotalPages(Math.ceil(jsonData?.total_results / 16))
       // console.log("curated" + totalPages)
     } catch (err) {
       console.error(err);
@@ -77,7 +77,7 @@ else {
   };
   fetchData();
 }
-}, [query, pageNum]);
+}, [userInput, pageNum]);
 
 
 
