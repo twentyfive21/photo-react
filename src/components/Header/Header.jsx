@@ -18,8 +18,9 @@ function Header() {
   return (
     <div className='header-container'>
         <section className='header-left'>
-          <Link to='/'><TbCameraHeart className='camera'/></Link>
-          <Link to='/'>Polaroid Palette</Link>
+          <Link to='/'onClick={()=>setUserInput('')}><TbCameraHeart className='camera'/>
+          </Link>
+          <Link to='/' onClick={()=>setUserInput('')}>Polaroid Palette</Link>
         </section>
         <input onChange={handleSubmit}
         value={query} type='text' placeholder='Search' id='input'

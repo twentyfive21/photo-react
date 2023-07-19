@@ -35,7 +35,6 @@ function Homepage() {
 
 // Make a api call to site for search query 
 useEffect(() => {
-
   const apiKey = import.meta.env.VITE_API_KEY
   
   if(userInput) {
@@ -78,7 +77,6 @@ else {
   fetchData();
 }
 }, [userInput, pageNum]);
-
 
 
   return (
