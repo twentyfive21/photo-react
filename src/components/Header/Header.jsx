@@ -3,6 +3,8 @@ import './Header.css'
 import {Link} from 'react-router-dom'
 import { TbCameraHeart } from "react-icons/tb";
 import { SearchContext } from '../../contexts/Search';
+import { TbMoonStars } from "react-icons/tb";
+import { MdSunny } from "react-icons/md";
 
 function Header() {
 
@@ -21,15 +23,18 @@ const clearInput = () => {
   
   return (
     <div className='header-container'>
-        <section className='header-left'>
-          <Link to='/'onClick={()=>clearInput()}><TbCameraHeart className='camera'/>
-          </Link>
-          <Link to='/' onClick={()=>clearInput()}>Polaroid Palette</Link>
+        <section className='header-spacing'>
+            <Link to='/'onClick={()=>clearInput()}><TbCameraHeart className='camera'/>
+            </Link>
+            <Link to='/' onClick={()=>clearInput()}>Polaroid Palette</Link>
         </section>
-        <input onChange={handleSubmit}
-        value={query} type='text' placeholder='Search' id='input'
-        ></input>
-          <Link to='/mypalette'>My Palette</Link>
+          <input onChange={handleSubmit}
+          value={query} type='text' placeholder='Search' id='input'
+          ></input>
+          <section className='header-spacing'>
+            <p className='theme-style'><TbMoonStars/></p>
+            <Link to='/mypalette'>My Palette</Link>
+          </section>
     </div>
   )
 }
