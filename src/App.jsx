@@ -5,7 +5,10 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer'
 import Homepage from './pages/Homepage/Homepage';
 import Favorites from './pages/Favorites/Favorites';
-import { SearchContextProvider } from './contexts/Search';
+import SearchContextProvider from './contexts/Search';
+import ThemeContextProvider  from './contexts/Theme';
+
+
 
 
 function App() {
@@ -14,6 +17,8 @@ function App() {
   return (
     <>
     <BrowserRouter>
+
+    <ThemeContextProvider>
     <SearchContextProvider>
     <Header />
       <Routes>
@@ -24,6 +29,7 @@ function App() {
       </Routes>
       <Footer />
       </SearchContextProvider>
+      </ThemeContextProvider>
     </BrowserRouter>
     </>
   )

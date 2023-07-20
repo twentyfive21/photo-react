@@ -5,8 +5,12 @@ import { TbCameraHeart } from "react-icons/tb";
 import { SearchContext } from '../../contexts/Search';
 import { TbMoonStars } from "react-icons/tb";
 import { MdSunny } from "react-icons/md";
+import { ThemeContext } from '../../contexts/Theme';
+
 
 function Header() {
+
+  const {darkMode, setDarkMode} = useContext(ThemeContext)
 
   const {query, setQuery, setUserInput, setPageNum} = useContext(SearchContext)
 
