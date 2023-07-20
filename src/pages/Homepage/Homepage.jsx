@@ -6,7 +6,7 @@ import { SearchContext } from '../../contexts/Search'
 
 function Homepage() {
 
-    const {query, userInput, pageNum, setPageNum} = useContext(SearchContext)
+    const {userInput, pageNum, setPageNum} = useContext(SearchContext)
     // total_results object holds the total amount of photos that comes back on a search
     // create state photos to be stored
     const [photos, setPhotos] = useState([])
