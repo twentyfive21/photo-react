@@ -26,7 +26,7 @@ const clearInput = () => {
 }
   
   return (
-    <div className='header-container'>
+    <div className={darkMode?'header-container header-dark' : 'header-container'}>
         <section className='header-spacing'>
             <Link to='/'onClick={()=>clearInput()}><TbCameraHeart className='camera'/>
             </Link>
