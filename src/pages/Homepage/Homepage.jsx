@@ -2,10 +2,10 @@ import React, {useContext, useEffect, useState} from 'react'
 import './Homepage.css'
 import PhotoCard from '../../components/PhotoCard/PhotoCard'
 import { SearchContext } from '../../contexts/Search'
-
+import { ThemeContext } from '../../contexts/Theme';
 
 function Homepage() {
-
+    const {darkMode, setDarkMode} = useContext(ThemeContext)
     const {userInput, pageNum, setPageNum} = useContext(SearchContext)
     // total_results object holds the total amount of photos that comes back on a search
     // create state photos to be stored
@@ -79,7 +79,7 @@ else {
 
   return (
     <div>
-     <div className='homepage-container'>
+     <div className={darkMode?'homepage-container homepage-dark' : 'homepage-container'}>
       {
         photos?.map(item => <PhotoCard key={item.id} photo={item}/>)
       }

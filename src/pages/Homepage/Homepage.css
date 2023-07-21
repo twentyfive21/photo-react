@@ -10,6 +10,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    color: black;
+}
+.homepage-dark {
+    background-color: gray;
 }
 .homepage-btn {
     display: flex;
