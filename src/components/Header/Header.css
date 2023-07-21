@@ -3,12 +3,11 @@
     align-items: center;
     justify-content: space-around;
     font-size: 1rem;
-   padding: 30px 0;
-    margin-bottom: 5px;
+    padding: 30px 0;
     color: black;
 }
 .header-dark{
-    background-color: #121212;
+    background-color: grey;
     color: white;
 }
 
