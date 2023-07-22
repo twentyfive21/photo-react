@@ -84,7 +84,7 @@ else {
         photos?.map(item => <PhotoCard key={item.id} photo={item}/>)
       }
       </div>
-      <div className='pages'>
+      <div className={darkMode?'pages pages-dark' : 'pages'}>
         <p>{pageNum} out of {totalPages}</p>
       <div className='homepage-btn'>
         <button onClick={prevPage}>Previous</button>
