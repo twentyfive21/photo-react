@@ -36,7 +36,15 @@ const clearInput = () => {
           value={query} type='text' placeholder='Search' id='input'
           ></input>
           <section className='header-spacing'>
-            <p className='theme-style'><TbMoonStars/></p>
+            <p className='theme-style'
+            onClick={() => setDarkMode(!darkMode)}>
+              {
+                darkMode?
+                <TbMoonStars/>
+                :
+                <MdSunny/>
+              }
+            </p>
             <Link to='/mypalette'>My Palette</Link>
           </section>
     </div>
