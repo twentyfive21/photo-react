@@ -2,6 +2,7 @@ import React from 'react'
 import './PhotoCard.css'
 import { MdFavoriteBorder , MdFavorite } from "react-icons/md";
 
+
 function PhotoCard({photo}) {
   let isFavorite = false;
   return (
