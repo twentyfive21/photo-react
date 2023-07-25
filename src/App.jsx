@@ -7,8 +7,7 @@ import Homepage from './pages/Homepage/Homepage';
 import Favorites from './pages/Favorites/Favorites';
 import SearchContextProvider from './contexts/Search';
 import ThemeContextProvider  from './contexts/Theme';
-
-
+import FavoritesContextProvider from './contexts/FavoritesContext';
 
 
 function App() {
@@ -18,6 +17,7 @@ function App() {
     <>
     <BrowserRouter>
 
+    <FavoritesContextProvider>
     <ThemeContextProvider>
     <SearchContextProvider>
     <Header />
@@ -30,6 +30,8 @@ function App() {
       <Footer />
       </SearchContextProvider>
       </ThemeContextProvider>
+      </FavoritesContextProvider>
+
     </BrowserRouter>
     </>
   )
