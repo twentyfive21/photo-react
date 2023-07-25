@@ -20,10 +20,10 @@ function Header() {
     setUserInput(e.target.value)
     setTimeout(()=> setQuery(''), 10000)
   }
-const clearInput = () => {
+  const clearInput = () => {
   setPageNum(1)
   setUserInput('')
-}
+  }
   
   return (
     <div className={darkMode?'header-container header-dark' : 'header-container'}>
