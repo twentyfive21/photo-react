@@ -44,7 +44,7 @@ useEffect(() => {
         }
       });
       const jsonData = await response.json();
-      console.log(jsonData)
+      // console.log(jsonData)
       setPhotos(jsonData?.photos)
       setTotalPages(Math.ceil(jsonData?.total_results / 16))
     } catch (err) {
