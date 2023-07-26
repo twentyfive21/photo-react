@@ -63,7 +63,7 @@ else {
         }
       });
       const jsonData = await response.json();
-      console.log(jsonData)
+      // console.log(jsonData)
       setPhotos(jsonData?.photos)
       // since there are 8000 photos diving by 80 gives us 100pgs for curated 
       setTotalPages(Math.ceil(jsonData?.total_results / 16))

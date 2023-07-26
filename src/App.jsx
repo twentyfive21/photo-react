@@ -20,7 +20,7 @@ function App() {
     <FavoritesContextProvider>
     <ThemeContextProvider>
     <SearchContextProvider>
-    <Header />
+      <Header />
       <Routes>
      
       <Route path='/' element={<Homepage />} />
