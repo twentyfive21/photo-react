@@ -1,7 +1,7 @@
 import React, {useContext, useEffect, useState} from 'react'
 import './Homepage.css'
 import PhotoCard from '../../components/PhotoCard/PhotoCard'
-import { ThemeContext } from '../../contexts/Theme';
+import { ThemeContext } from '../../contexts/ThemeContext';
 import { SearchContext } from '../../contexts/SearchContext';
 
 function Homepage() {

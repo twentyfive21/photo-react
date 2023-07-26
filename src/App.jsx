@@ -6,7 +6,7 @@ import Footer from './components/Footer/Footer'
 import Homepage from './pages/Homepage/Homepage';
 import Favorites from './pages/Favorites/Favorites';
 import SearchContextProvider from './contexts/SearchContext';
-import ThemeContextProvider  from './contexts/Theme';
+import ThemeContextProvider  from './contexts/ThemeContext';
 import FavoritesContextProvider from './contexts/FavoritesContext';
 
 

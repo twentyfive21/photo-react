@@ -5,7 +5,7 @@ import { TbCameraHeart } from "react-icons/tb";
 import { SearchContext } from '../../contexts/SearchContext';
 import { TbMoonStars } from "react-icons/tb";
 import { MdSunny } from "react-icons/md";
-import { ThemeContext } from '../../contexts/Theme';
+import { ThemeContext } from '../../contexts/ThemeContext';
 
 
 function Header() {
