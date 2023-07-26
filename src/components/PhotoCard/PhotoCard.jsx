@@ -31,3 +31,8 @@ function PhotoCard({photo}) {
 export default PhotoCard
   // must be arrow func since you are passing a parameter into the func 
   // onClick={()=>addPhoto(photo)} />
+
+  // adding object to an array of objects in state
+  // you cannot push a new item to state, you must create a new array and use the spread (...) operator 
+  // the newly created array is all of the current array plus the new item
+  // setFavorites([...favorites, newCharacter])
