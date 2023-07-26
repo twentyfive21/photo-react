@@ -5,7 +5,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer'
 import Homepage from './pages/Homepage/Homepage';
 import Favorites from './pages/Favorites/Favorites';
-import SearchContextProvider from './contexts/Search';
+import SearchContextProvider from './contexts/SearchContext';
 import ThemeContextProvider  from './contexts/Theme';
 import FavoritesContextProvider from './contexts/FavoritesContext';
 

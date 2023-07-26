@@ -1,8 +1,8 @@
 import React, {useContext, useEffect, useState} from 'react'
 import './Homepage.css'
 import PhotoCard from '../../components/PhotoCard/PhotoCard'
-import { SearchContext } from '../../contexts/Search'
 import { ThemeContext } from '../../contexts/Theme';
+import { SearchContext } from '../../contexts/SearchContext';
 
 function Homepage() {
     const {darkMode, setDarkMode} = useContext(ThemeContext)

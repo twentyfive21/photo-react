@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import './Header.css'
 import {Link} from 'react-router-dom'
 import { TbCameraHeart } from "react-icons/tb";
-import { SearchContext } from '../../contexts/Search';
+import { SearchContext } from '../../contexts/SearchContext';
 import { TbMoonStars } from "react-icons/tb";
 import { MdSunny } from "react-icons/md";
 import { ThemeContext } from '../../contexts/Theme';
