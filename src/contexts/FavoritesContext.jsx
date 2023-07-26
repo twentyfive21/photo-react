@@ -9,6 +9,9 @@ export default function FavoritesContextProvider(props){
 
     const addPhoto = (photoToAdd) => {
         console.log('adding', photoToAdd)
+        // ADD photoToAdd to favorites array 
+        let newFavorites = [...favorites, photoToAdd]
+        console.log(newFavorites)
     }
 
     return(
