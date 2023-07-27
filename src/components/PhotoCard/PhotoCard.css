@@ -7,6 +7,7 @@
     width: 250px;
     height: 360px;
     margin: 20px 45px;
+    box-shadow: -2px 0px 16px 1px rgba(0,0,0,0.28);
 }
 .cards-container img {
     width: 200px;
