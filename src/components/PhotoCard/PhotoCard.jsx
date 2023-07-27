@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import './PhotoCard.css'
 import { MdFavoriteBorder , MdFavorite } from "react-icons/md";
 import { FavoritesContext } from '../../contexts/FavoritesContext';
@@ -6,11 +6,20 @@ import { ThemeContext } from '../../contexts/ThemeContext';
 
 
 function PhotoCard({photo}) {
-  const {darkMode, setDarkMode} = useContext(ThemeContext)
-  let isFavorite = false;
-
   // access favorites global context use {} not []
   const {favorites, addPhoto} = useContext(FavoritesContext)
+  const {darkMode, setDarkMode} = useContext(ThemeContext)
+  // let isFavorite = false;
+  const [isFavorite, setIsFavorite] = useState(false)
+  
+
+  useEffect(
+    ()=>{
+      // is this card in favorites?
+      setIsFavorite(favorites.find(item => item.id === photo.id))
+    },[favorites]
+    )
+
 
   return (
     <div className={darkMode? 'cards-container cards-dark' : 'cards-container'}>
