@@ -9,7 +9,7 @@ function Favorites() {
     const {favorites} = useContext(FavoritesContext)
   return (
     <div className='favorites-container'>
-      <h1>My Palette</h1>
+      <h1>My Palette</h1> 
       <div className='favorites-center'>
         {
           favorites.map(item => <PhotoCard key={item.id} photo={item}/>)
