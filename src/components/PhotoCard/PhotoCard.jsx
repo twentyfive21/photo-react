@@ -2,16 +2,18 @@ import React, { useContext } from 'react'
 import './PhotoCard.css'
 import { MdFavoriteBorder , MdFavorite } from "react-icons/md";
 import { FavoritesContext } from '../../contexts/FavoritesContext';
+import { ThemeContext } from '../../contexts/ThemeContext';
 
 
 function PhotoCard({photo}) {
+  const {darkMode, setDarkMode} = useContext(ThemeContext)
   let isFavorite = false;
 
   // access favorites global context use {} not []
   const {favorites, addPhoto} = useContext(FavoritesContext)
 
   return (
-    <div className='cards-container'>
+    <div className={darkMode? 'cards-container cards-dark' : 'cards-container'}>
         <img src={photo?.src?.original} />
         <div className='text-center'>
         <p>{photo?.photographer}</p>
