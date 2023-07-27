@@ -7,7 +7,7 @@ import { ThemeContext } from '../../contexts/ThemeContext';
 
 function PhotoCard({photo}) {
   // access favorites global context use {} not []
-  const {favorites, addPhoto} = useContext(FavoritesContext)
+  const {favorites, addPhoto, removePhoto} = useContext(FavoritesContext)
   const {darkMode, setDarkMode} = useContext(ThemeContext)
   // let isFavorite = false;
   const [isFavorite, setIsFavorite] = useState(false)
@@ -29,7 +29,9 @@ function PhotoCard({photo}) {
         <a href={photo?.photographer_url}>View Profile</a>
         {
           isFavorite?
-          <MdFavorite className='heart-icon'/>
+          <MdFavorite className='heart-icon'
+          onClick={()=>removePhoto(photo.id)}
+          />
           :
           <MdFavoriteBorder className='heart-icon'
           onClick={()=>addPhoto(photo)} />
