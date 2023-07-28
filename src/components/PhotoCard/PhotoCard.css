@@ -10,7 +10,7 @@
     box-shadow: -2px 0px 16px 1px rgba(0,0,0,0.28);
 }
 .cards-dark {
-    box-shadow: 0px -2px 18px -4px #FFFFF7;
+    box-shadow: 0px -2px 15px -4px #FFFFF7;
     background-color: #D3D3D3;
 }
 .cards-container img {
@@ -26,6 +26,10 @@
     line-height: 22px;
 }
 .heart-icon {
+ font-size: 1rem;
  margin-top: 5px;
  cursor: pointer;
+}
+.heart-red {
+    color: tomato;
 }

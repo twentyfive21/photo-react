@@ -29,7 +29,7 @@ function PhotoCard({photo}) {
         <a href={photo?.photographer_url}>View Profile</a>
         {
           isFavorite?
-          <MdFavorite className='heart-icon'
+          <MdFavorite className='heart-icon heart-red'
           onClick={()=>removePhoto(photo.id)}
           />
           :
