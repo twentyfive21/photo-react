@@ -4,11 +4,17 @@
     flex-direction: column;
     align-items: center;
 } 
+.favorites-container h2 {
+    color: black;
+    height: 70vh;
+    letter-spacing: 1px;
+    padding-top: 40px;
+}
 .favorites-dark {
     background-color: #232b2b;
     color: black;
 }
-.favorites-dark h1 {
+.favorites-dark h1, h2 {
     color: whitesmoke;
 }
 .favorites-center{

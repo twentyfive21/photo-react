@@ -14,7 +14,10 @@ function Favorites() {
       <h1>My Current Palette</h1> 
       <div className='favorites-center'>
         {
+          favorites.length > 0 ?
           favorites.map(item => <PhotoCard key={item.id} photo={item}/>)
+          :
+          <h2>No favorites selected in palette</h2>
         }
       </div>
     </div>

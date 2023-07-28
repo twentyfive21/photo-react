@@ -7,7 +7,7 @@ export const FavoritesContext = createContext()
 export default function FavoritesContextProvider(props){
     const [favorites, setFavorites] = useState([])
 
-    // adding photo to favorites
+    // adding photo to favorites   
     const addPhoto = photoToAdd => {
         // ADD photoToAdd to favorites array 
         let newFavorites = [...favorites, photoToAdd]
@@ -15,10 +15,13 @@ export default function FavoritesContextProvider(props){
         setFavorites(newFavorites);
     }
 
-    // removing photo from favorites you cannot delete 
-    // an item from state so you must create a new array with filter 
+    // removing photo from favorites state you cannot delete an
+    // item from state so you must create a new array with filter 
     const removePhoto = photoId => {
-       setFavorites(favorites.filter(item =>item.id !== photoId))
+        // remove photo from favorites
+        let newFavorites = favorites.filter(item =>item.id !== photoId)
+        // store new arr in favorites state 
+        setFavorites(newFavorites)
     }
 
     return(
