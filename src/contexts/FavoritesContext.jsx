@@ -8,20 +8,20 @@ export default function FavoritesContextProvider(props){
     const [favorites, setFavorites] = useState([])
 
 
-
+    // if items in favorites on window on load have them set 
     useEffect(
         ()=>{
+            // check if anything in storage 
             const storedFavorites = localStorage.getItem('favorites')
-            // if items in favorites on window on load have them set 
             if(storedFavorites){
                 setFavorites(JSON.parse(storedFavorites))
             }
         },[]
         )
 
+     // saving new fav to storage
     useEffect(
         ()=> {
-            // saving new fav to storage
             localStorage.setItem('favorites', JSON.stringify(favorites))
         },[favorites]
         )
