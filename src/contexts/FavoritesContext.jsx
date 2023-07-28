@@ -8,16 +8,23 @@ export default function FavoritesContextProvider(props){
     const [favorites, setFavorites] = useState([])
 
 
+
+    useEffect(
+        ()=>{
+            const storedFavorites = localStorage.getItem('favorites')
+            // if items in favorites on window on load have them set 
+            if(storedFavorites){
+                setFavorites(JSON.parse(storedFavorites))
+            }
+        },[]
+        )
+
     useEffect(
         ()=> {
             // saving new fav to storage
             localStorage.setItem('favorites', JSON.stringify(favorites))
         },[favorites]
         )
-
-
-
-
 
     // adding photo to favorites   
     const addPhoto = photoToAdd => {
