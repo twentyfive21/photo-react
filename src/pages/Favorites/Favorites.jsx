@@ -7,7 +7,7 @@ import { ThemeContext } from '../../contexts/ThemeContext';
 function Favorites() {
   // display fav photos get from context 
     // access favorites global context use {} not []
-    const {darkMode, setDarkMode} = useContext(ThemeContext)
+    const {darkMode} = useContext(ThemeContext)
     const {favorites} = useContext(FavoritesContext)
   return (
     <div className={darkMode?'favorites-container favorites-dark' : 'favorites-container'}>
