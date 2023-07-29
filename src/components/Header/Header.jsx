@@ -20,11 +20,11 @@ function Header() {
     setPageNum(1) 
     setQuery(e.target.value)
     setUserInput(e.target.value)
-    setTimeout(()=> setQuery(''), 10000)
+    setTimeout(()=> setQuery(''), 15000)
   }
   const clearInput = () => {
   setPageNum(1)
-  setUserInput('')
+  setQuery('')
   }
   
   return (
@@ -47,7 +47,7 @@ function Header() {
                 <MdSunny/>
               }
             </p>
-            <Link to='/mypalette'>My Palette</Link>
+            <Link to='/mypalette'onClick={()=>clearInput()}>My Palette</Link>
           </section>
     </div>
   )
