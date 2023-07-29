@@ -17,7 +17,7 @@ function Favorites() {
           favorites.length > 0 ?
           favorites.map(item => <PhotoCard key={item.id} photo={item}/>)
           :
-          <h2 className={darkMode? 'heading-dark' : null}>Nothing currently selected in palette</h2>
+          <h2 className={darkMode? 'heading-dark nothing-selected' : 'nothing-selected'}>Nothing currently selected in palette</h2>
         }
       </div>
     </div>
