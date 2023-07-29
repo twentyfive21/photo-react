@@ -1,6 +1,6 @@
-import React, { useContext } from 'react'
 import './Header.css'
-import {Link} from 'react-router-dom'
+import React, { useContext } from 'react'
+import {Link, useNavigate} from 'react-router-dom'
 import { TbCameraHeart } from "react-icons/tb";
 import { SearchContext } from '../../contexts/SearchContext';
 import { TbMoonStars } from "react-icons/tb";
@@ -10,11 +10,13 @@ import { ThemeContext } from '../../contexts/ThemeContext';
 
 function Header() {
 
+  // activate the navigate function out of the object returned by useNavigate() & assigning it to a variable called navigate so we can use it in our component. This gives us access to the navigate function directly instead of having to call useNavigate everywhere.
+  const navigate = useNavigate()
   const {darkMode, setDarkMode} = useContext(ThemeContext)
-
   const {query, setQuery, setUserInput, setPageNum} = useContext(SearchContext)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
+    navigate('/')
     setPageNum(1) 
     setQuery(e.target.value)
     setUserInput(e.target.value)
