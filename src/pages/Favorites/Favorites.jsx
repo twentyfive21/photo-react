@@ -1,14 +1,18 @@
-import React, {useContext} from 'react'
 import './Favorites.css'
-import { FavoritesContext } from '../../contexts/FavoritesContext'
+import React, {useContext, useState} from 'react'
 import PhotoCard from '../../components/PhotoCard/PhotoCard'
+import { FavoritesContext } from '../../contexts/FavoritesContext'
 import { ThemeContext } from '../../contexts/ThemeContext';
+import Modal from 'react-modal'
 
 function Favorites() {
-  // display fav photos get from context 
     // access favorites global context use {} not []
     const {darkMode} = useContext(ThemeContext)
     const {favorites} = useContext(FavoritesContext)
+
+    // create state for modal 
+    const [isOpen, setIsOpen] = useState(false)
+
   return (
     <div className={darkMode?'favorites-container favorites-dark' : 'favorites-container'}>
       <h1>My Current Palette</h1> 
