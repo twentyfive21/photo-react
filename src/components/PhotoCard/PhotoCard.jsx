@@ -38,6 +38,7 @@ function PhotoCard({photo}) {
     },[favorites]
     )
 
+    console.log(photo)
 
   return (
     <div className={darkMode? 'cards-container cards-dark' : 'cards-container'}>
@@ -63,7 +64,7 @@ function PhotoCard({photo}) {
           // closes the modal if you click outside the image 
           onRequestClose={()=>setIsOpen(false)}
           contentLabel="Picture Modal">
-          <div className='pop-up'>
+          <div className='pop-up' style={{backgroundColor:photo.avg_color}}>
             <img src={photo?.src?.original} />
             <p>{photo?.photographer}</p>
           </div>

@@ -34,6 +34,14 @@
     color: tomato;
 }
 .pop-up img{
-    height: 50vw;
+    height: 80vh;
+    padding: 20px;
     object-fit: contain;
+}
+.pop-up p {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding-bottom: 15px;
+ margin-top: -10px;   
 }
