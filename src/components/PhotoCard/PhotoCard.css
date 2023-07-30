@@ -33,3 +33,8 @@
 .heart-red {
     color: tomato;
 }
+.pop-up {
+    height: 500px;
+    width: 500px;
+    object-fit: cover;
+}
