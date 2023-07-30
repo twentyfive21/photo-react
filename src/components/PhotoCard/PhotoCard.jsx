@@ -46,6 +46,7 @@ function PhotoCard({photo}) {
     <div className={darkMode? 'cards-container cards-dark' : 'cards-container'}>
         <img src={photo?.src?.original} 
         onClick={()=>setIsOpen(true)}
+        
         />
         <div className='text-center'>
         <p>{photo?.photographer}</p>
