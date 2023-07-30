@@ -39,4 +39,10 @@
     object-fit: contain;
 }
 
+@media (max-width: 550px) {
+    .pop-up img{
+        height: 80vh;
+        width: 90vw;
+    }
+}
 
