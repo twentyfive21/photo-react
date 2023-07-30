@@ -33,7 +33,7 @@ function Header() {
         <section className='header-spacing'>
             <Link to='/'onClick={()=>clearInput()}><TbCameraHeart className='camera'/>
             </Link>
-            <Link to='/' onClick={()=>clearInput()}>Polaroid Palette</Link>
+            <Link to='/' id='hidden-mobile' onClick={()=>clearInput()}>Polaroid Palette</Link>
         </section>
           <input onChange={handleSubmit}
           value={query} type='text' placeholder='Search' id='input'
