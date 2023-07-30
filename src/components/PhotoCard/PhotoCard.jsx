@@ -3,6 +3,7 @@ import './PhotoCard.css'
 import { MdFavoriteBorder , MdFavorite } from "react-icons/md";
 import { FavoritesContext } from '../../contexts/FavoritesContext';
 import { ThemeContext } from '../../contexts/ThemeContext';
+import Modal from 'react-modal'
 
 
 function PhotoCard({photo}) {
@@ -12,6 +13,23 @@ function PhotoCard({photo}) {
   // let isFavorite = false;
   const [isFavorite, setIsFavorite] = useState(false)
   
+    // create state for modal 
+    const [isOpen, setIsOpen] = useState(false)
+    // Styling for modal 
+    const customStyles = {
+      content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+      },
+    };
+    // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
+    // this is for accessibility and screen readers 
+    Modal.setAppElement(document.getElementById('root'));
+
 
   useEffect(
     ()=>{
@@ -23,7 +41,9 @@ function PhotoCard({photo}) {
 
   return (
     <div className={darkMode? 'cards-container cards-dark' : 'cards-container'}>
-        <img src={photo?.src?.original} />
+        <img src={photo?.src?.original} 
+        onClick={()=>setIsOpen(true)}
+        />
         <div className='text-center'>
         <p>{photo?.photographer}</p>
         <a href={photo?.photographer_url}>View Profile</a>
@@ -37,6 +57,23 @@ function PhotoCard({photo}) {
           onClick={()=>addPhoto(photo)} />
         }
         </div>
+        <Modal
+        isOpen={isOpen}
+        // onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <h2>Hi</h2>
+        {/* <button onClick={closeModal}>close</button> */}
+        <div>I am a modal</div>
+        <form>
+          <input />
+          <button>tab navigation</button>
+          <button>stays</button>
+          <button>inside</button>
+          <button>the modal</button>
+        </form>
+      </Modal>
     </div>
   )
 }
