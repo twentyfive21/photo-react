@@ -24,7 +24,7 @@
     border: none;
     border-radius: 20px;
     padding: 0px 10px;
-    width: 40%;
+    width: 45%;
     height: 4vh;
     font-size: 1rem;
 }
@@ -32,4 +32,13 @@
     font-size: 1.3rem;
     padding: 5px 10px 0px 10px;
     cursor: pointer;
+}
+
+@media (max-width: 550px) {
+    #hidden-mobile{
+        display: none;
+    }
+    .header-container {
+      justify-content:space-evenly
+    }
 }
