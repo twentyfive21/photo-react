@@ -46,7 +46,7 @@ function PhotoCard({photo}) {
     <div className={darkMode? 'cards-container cards-dark' : 'cards-container'}>
         <img src={photo?.src?.original} 
         onClick={()=>setIsOpen(true)}
-        
+        alt={photo?.alt}
         />
         <div className='text-center'>
         <p>{photo?.photographer}</p>
@@ -69,7 +69,6 @@ function PhotoCard({photo}) {
           contentLabel="Picture Modal">
           <div className='pop-up' style={{backgroundColor:photo.avg_color}}>
             <img src={photo?.src?.original} />
-            <p>{photo?.photographer}</p>
           </div>
       </Modal>
     </div>
