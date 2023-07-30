@@ -40,8 +40,6 @@ function PhotoCard({photo}) {
     },[favorites]
     )
 
-    console.log(photo)
-
   return (
     <div className={darkMode? 'cards-container cards-dark' : 'cards-container'}>
         <img src={photo?.src?.original} 
