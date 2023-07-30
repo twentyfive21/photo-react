@@ -25,6 +25,7 @@ function Header() {
   const clearInput = () => {
   setPageNum(1)
   setQuery('')
+  setUserInput('')
   }
   
   return (
