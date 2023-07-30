@@ -24,6 +24,8 @@ function PhotoCard({photo}) {
         bottom: 'auto',
         marginRight: '-50%',
         transform: 'translate(-50%, -50%)',
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+        border: "none",
       },
     };
     // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
