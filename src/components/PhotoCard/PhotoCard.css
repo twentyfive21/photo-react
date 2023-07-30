@@ -33,8 +33,7 @@
 .heart-red {
     color: tomato;
 }
-.pop-up {
-    height: 500px;
-    width: 500px;
-    object-fit: cover;
+.pop-up img{
+    height: 50vw;
+    object-fit: contain;
 }

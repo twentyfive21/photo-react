@@ -57,19 +57,16 @@ function PhotoCard({photo}) {
           onClick={()=>addPhoto(photo)} />
         }
         </div>
-        <Modal
-        isOpen={isOpen}
-        // onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="Example Modal"
-        >
-        {/* <button onClick={closeModal}>close</button> */}
-        <div className='pop-up'>
+      <Modal
+          isOpen={isOpen}
+          style={customStyles}
+          // closes the modal if you click outside the image 
+          onRequestClose={()=>setIsOpen(false)}
+          contentLabel="Picture Modal">
+          <div className='pop-up'>
             <img src={photo?.src?.original} />
             <p>{photo?.photographer}</p>
-            <a href={photo?.photographer_url}>View Profile</a>
-            <button>tab navigation</button>
-        </div>
+          </div>
       </Modal>
     </div>
   )
