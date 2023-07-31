@@ -35,13 +35,14 @@
 }
 .pop-up img{
     height: 90vh;
+    width: auto;
     padding: 20px;
     object-fit: contain;
 }
 
 @media (max-width: 550px) {
     .pop-up img{
-        height: 80vh;
+        height: 300px;
         width: 90vw;
     }
 }
