@@ -42,8 +42,8 @@
 
 @media (max-width: 550px) {
     .pop-up img{
-        height: 300px;
-        width: 90vw;
+      width: 80vw;
+      height: auto;
     }
 }
 
