@@ -47,7 +47,6 @@ function PhotoCard({photo}) {
         <div className='text-center'>
         <p>{photo?.photographer}</p>
         <a href={photo?.photographer_url}>View Profile</a>
-        <button onClick={()=>handleClick(photo)}>download</button>
         {
           isFavorite?
           <MdFavorite className='heart-icon heart-red'
