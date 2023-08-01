@@ -38,7 +38,7 @@ useEffect(() => {
   if(userInput) {
   const fetchData = async () => {
     try {
-      const response = await fetch(`https://api.pexels.com/v1/search?query=${userInput}&page=${pageNum}&per_page=16`, {
+      const response = await fetch(`https://api.pexels.com/v1/search?query=${userInput}&page=${pageNum}&per_page=20`, {
         headers: {
           Authorization: apiKey
         }
@@ -46,7 +46,7 @@ useEffect(() => {
       const jsonData = await response.json();
       // console.log(jsonData)
       setPhotos(jsonData?.photos)
-      setTotalPages(Math.ceil(jsonData?.total_results / 16))
+      setTotalPages(Math.ceil(jsonData?.total_results / 20))
     } catch (err) {
       console.error(err);
     }
@@ -57,17 +57,16 @@ useEffect(() => {
 else {
   const fetchData = async () => {
     try {
-      const response = await fetch(`https://api.pexels.com/v1/curated?page=${pageNum}&per_page=16`, {
+      const response = await fetch(`https://api.pexels.com/v1/curated?page=${pageNum}&per_page=20`, {
         headers: {
           Authorization: apiKey
         }
       });
       const jsonData = await response.json();
-      // console.log(jsonData)
+      console.log(jsonData)
       setPhotos(jsonData?.photos)
       // since there are 8000 photos diving by 80 gives us 100pgs for curated 
-      setTotalPages(Math.ceil(jsonData?.total_results / 16))
-      // console.log("curated" + totalPages)
+      setTotalPages(Math.ceil(jsonData?.total_results / 20))
     } catch (err) {
       console.error(err);
     }
