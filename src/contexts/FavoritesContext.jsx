@@ -42,6 +42,7 @@ export default function FavoritesContextProvider(props){
         // store new arr in favorites state 
         setFavorites(newFavorites)
     }
+    
 
     return(
         <FavoritesContext.Provider value={{favorites, setFavorites, addPhoto, removePhoto}}>

@@ -5,7 +5,6 @@ import { FavoritesContext } from '../../contexts/FavoritesContext';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import Modal from 'react-modal'
 
-
 function PhotoCard({photo}) {
   // access favorites global context use {} not []
   const {favorites, addPhoto, removePhoto} = useContext(FavoritesContext)
@@ -13,7 +12,7 @@ function PhotoCard({photo}) {
   // let isFavorite = false;
   const [isFavorite, setIsFavorite] = useState(false)
   
-    // create state for modal 
+  // create state for modal 
     const [isOpen, setIsOpen] = useState(false)
     // Styling for modal 
     const customStyles = {
@@ -32,10 +31,9 @@ function PhotoCard({photo}) {
     // this is for accessibility and screen readers 
     Modal.setAppElement(document.getElementById('root'));
 
-
+  // checks if the card in favorites
   useEffect(
     ()=>{
-      // is this card in favorites?
       setIsFavorite(favorites.find(item => item.id === photo.id))
     },[favorites]
     )
@@ -49,10 +47,11 @@ function PhotoCard({photo}) {
         <div className='text-center'>
         <p>{photo?.photographer}</p>
         <a href={photo?.photographer_url}>View Profile</a>
+        <button onClick={()=>handleClick(photo)}>download</button>
         {
           isFavorite?
           <MdFavorite className='heart-icon heart-red'
-          onClick={()=>removePhoto(photo.id)}
+          onClick={()=>removePhoto(photo?.id)}
           />
           :
           <MdFavoriteBorder className='heart-icon'
