@@ -40,7 +40,8 @@ function PhotoCard({photo}) {
 
   return (
     <div className={darkMode? 'cards-container cards-dark' : 'cards-container'}>
-        <img src={photo?.src?.original} 
+        
+        <img src={photo?.src?.tiny} 
         onClick={()=>setIsOpen(true)}
         alt={photo?.alt}
         />
