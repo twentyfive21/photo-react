@@ -29,6 +29,8 @@
    border: none;
    background-color: lightsteelblue;
    cursor: pointer;
+   color: black;
+   letter-spacing: 1px;
 }
 .pages {
     padding: 25px 0px;
