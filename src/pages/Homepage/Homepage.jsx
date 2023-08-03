@@ -78,25 +78,26 @@ else {
 
   return (
     <div>
-     <div className={darkMode?'homepage-container homepage-dark' : 'homepage-container'}>
-        {
-          photos?.map(item => <PhotoCard key={item.id} photo={item}/>)
-        }
-    </div>
-      <div className={darkMode?'pages pages-dark' : 'pages'}>
-        {photos.length === 0 ? <p>No Available Images</p>
-        : 
-        <section>
-          <p>{pageNum} out of {totalPages}</p>
-          <div className='homepage-btn'>
-          <button onClick={prevPage}>Previous</button>
-          <button onClick={nextPage}>Next</button>
-          </div>
-        </section>
-        }
-      </div>
-    </div>
+    <div className={darkMode?'homepage-container homepage-dark' : 'homepage-container'}>
+       {
+         photos?.map(item => <PhotoCard key={item.id} photo={item}/>)
+       }
+   </div>
+     <div>
+       {photos.length === 0 ? <p>No Available Images</p>
+       : 
+       <section className={darkMode?'pages pages-dark' : 'pages'}>
+         <p>{pageNum} out of {totalPages}</p>
+         <div className='homepage-btn'>
+         <button onClick={prevPage}>Previous</button>
+         <button onClick={nextPage}>Next</button>
+         </div>
+       </section>
+       }
+     </div>
+   </div>
+    
   )
 }
-// This will check if the photos array is empty before rendering the PhotoCard components or the pagination. If there are no photos, it will display a default "No photos" message instead.
+
 export default Homepage
