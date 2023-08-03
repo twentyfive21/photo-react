@@ -44,7 +44,7 @@ useEffect(() => {
         }
       });
       const jsonData = await response.json();
-      // console.log(jsonData)
+      console.log(jsonData)
       setPhotos(jsonData?.photos)
       setTotalPages(Math.ceil(jsonData?.total_results / 30))
     } catch (err) {
@@ -63,7 +63,7 @@ else {
         }
       });
       const jsonData = await response.json();
-      console.log(jsonData)
+      // console.log(jsonData)
       setPhotos(jsonData?.photos)
       // since there are 8000 photos diving by 80 gives us 100pgs for curated 
       setTotalPages(Math.ceil(jsonData?.total_results / 30))
@@ -79,20 +79,24 @@ else {
   return (
     <div>
      <div className={darkMode?'homepage-container homepage-dark' : 'homepage-container'}>
-      {
-        photos?.map(item => <PhotoCard key={item.id} photo={item}/>)
-      }
-      </div>
+        {
+          photos?.map(item => <PhotoCard key={item.id} photo={item}/>)
+        }
+    </div>
       <div className={darkMode?'pages pages-dark' : 'pages'}>
-        <p>{pageNum} out of {totalPages}</p>
-      <div className='homepage-btn'>
-        <button onClick={prevPage}>Previous</button>
-        <button onClick={nextPage}>Next</button>
-      </div>
+        {photos.length === 0 ? <p>No Available Images</p>
+        : 
+        <section>
+          <p>{pageNum} out of {totalPages}</p>
+          <div className='homepage-btn'>
+          <button onClick={prevPage}>Previous</button>
+          <button onClick={nextPage}>Next</button>
+          </div>
+        </section>
+        }
       </div>
     </div>
-    
   )
 }
-
+// This will check if the photos array is empty before rendering the PhotoCard components or the pagination. If there are no photos, it will display a default "No photos" message instead.
 export default Homepage
