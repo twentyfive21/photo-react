@@ -84,7 +84,7 @@ else {
        }
    </div>
      <div>
-       {photos.length === 0 ? <p>No Available Images</p>
+       {photos.length === 0 ? <p className={darkMode?'pages pages-dark nothing-selected' : 'pages nothing-selected'}>No Available Images</p>
        : 
        <section className={darkMode?'pages pages-dark' : 'pages'}>
          <p>{pageNum} out of {totalPages}</p>
