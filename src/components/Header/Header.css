@@ -22,11 +22,12 @@
 #input {
     background-color: #D3D3D3;
     border: none;
-    border-radius: 20px;
-    padding: 0px 10px;
+    border-radius: 25px;
+    padding: 0px 20px;
     width: 40%;
     height: 4vh;
     font-size: 1rem;
+    letter-spacing: 2px;
 }
 .theme-style {
     font-size: 1.3rem;
