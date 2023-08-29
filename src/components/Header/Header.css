@@ -2,9 +2,12 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding: 30px 0px;
     color: black;
+}
+.header-container p:hover {
+    color: burlywood;
 }
 .header-dark{
     background-color: #232b2b;
