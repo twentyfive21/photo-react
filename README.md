@@ -1,5 +1,3 @@
-## Polaroid Palette a site where you can save and view photos.
----
 ## Welcome to Polaroid Palette, a captivating website designed to showcase and curate your very own photo collection. You have the power to personalize your experience through the feature we call "My Palette."
 ---
 ## Checkout the site live here: https://polaroidpalette.netlify.app/
