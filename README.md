@@ -24,7 +24,7 @@ Divided the user interface into smaller, reusable components, enhancing code mod
 Efficiently structured the components to facilitate data flow and interaction within the application.
 
 ### API Key Security :
-Secured sensitive information, such as the API key, by using an environment file (env file).
+* Secured sensitive information, such as the API key, by using an environment file (env file).
 Ensured that the API key remained confidential and was not exposed in version control, following best practices for API key protection.
 --- 
 ## Disclaimer 
