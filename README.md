@@ -6,8 +6,8 @@
 * My Palette Page: Saves the users current liked photos and uses local storage to save user data.
 * Dark/Light Mode: The user can toggle through both settings for a pleasent UI experience. 
 ---
-## Learning outcome
-### Building this React application has been an invaluable learning experience for me as a developer. Although React was completely new to me at first, I embraced the challenge and thoroughly enjoyed the process of creating this project. The opportunity to apply my skills in a practical way has helped reinforce what I've learned and given me the confidence to continue growing as a coder. There were hurdles along the way, but overcoming them through persistence and problem-solving has shown me how much progress I've made. I'm proud of having built this from scratch and look forward to creating more with React!
+### Learning outcome : 
+* Building this React application has been an invaluable learning experience for me as a developer. Although React was completely new to me at first, I embraced the challenge and thoroughly enjoyed the process of creating this project. The opportunity to apply my skills in a practical way has helped reinforce what I've learned and given me the confidence to continue growing as a coder. There were hurdles along the way, but overcoming them through persistence and problem-solving has shown me how much progress I've made. I'm proud of having built this from scratch and look forward to creating more with React!
 
 ### React Router Implementation :
 * Imported the necessary components for routing in React, including BrowserRouter, Routes, and Route from 'react-router-dom'.
