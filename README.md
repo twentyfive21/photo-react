@@ -27,6 +27,6 @@ Secured sensitive information, such as the API key, by using an environment file
 Ensured that the API key remained confidential and was not exposed in version control, following best practices for API key protection.
 --- 
 ## Disclaimer 
-#### I do not own any of these images and all of these are free to use from https://www.pexels.com/ .
+* I do not own any of these images and all of these are free to use from https://www.pexels.com/ .
 
 
