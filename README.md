@@ -1,4 +1,4 @@
-# Polaroid Palette is a website designed to showcase and curate your very own photo collection.
+## Polaroid Palette is a website designed to showcase and curate your very own photo collection.
 ---
 ## Checkout the site live here: https://polaroidpalette.netlify.app/
 ## Features
